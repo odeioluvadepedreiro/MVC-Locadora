@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title th:text="|${titulo} - Locadora de Filmes|">Locadora de Filmes</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="/css/style.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1>Locadora de Filmes</h1>
+        <p>Escolha um filme para assistir.</p>
+        <nav aria-label="Se��es da locadora">
+            <a th:href="@{/filmes}" href="/filmes" th:attr="aria-current=${modulo == 'filmes' ? 'page' : null}">Filmes</a>
+            <a th:href="@{/diretores}" href="/diretores" th:attr="aria-current=${modulo == 'diretores' ? 'page' : null}">Diretores</a>
+            <a th:href="@{/generos}" href="/generos" th:attr="aria-current=${modulo == 'generos' ? 'page' : null}">G�neros</a>
+            <a th:href="@{/clientes}" href="/clientes" th:attr="aria-current=${modulo == 'clientes' ? 'page' : null}">Clientes</a>
+            <a th:href="@{/locacoes}" href="/locacoes" th:attr="aria-current=${modulo == 'locacoes' ? 'page' : null}">Loca��es</a>
+        </nav>
+    </div>
+</header>
+<main class="container">
+    <h2 th:text="${titulo}">Filmes</h2>
+    <ul class="cards">
+        <li th:each="item : ${itens}">
+            <h3 th:text="${item.nome()}">Nome do filme</h3>
+            <p th:text="${item.detalhe()}">Detalhes</p>
+        </li>
+    </ul>
+</main>
+</body>
+</html>
