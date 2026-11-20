@@ -11,12 +11,12 @@
     <div class="container">
         <h1>Locadora de Filmes</h1>
         <p>Escolha um filme para assistir.</p>
-        <nav aria-label="Se��es da locadora">
+        <nav aria-label="Seções da locadora">
             <a th:href="@{/filmes}" href="/filmes" th:attr="aria-current=${modulo == 'filmes' ? 'page' : null}">Filmes</a>
             <a th:href="@{/diretores}" href="/diretores" th:attr="aria-current=${modulo == 'diretores' ? 'page' : null}">Diretores</a>
-            <a th:href="@{/generos}" href="/generos" th:attr="aria-current=${modulo == 'generos' ? 'page' : null}">G�neros</a>
+            <a th:href="@{/generos}" href="/generos" th:attr="aria-current=${modulo == 'generos' ? 'page' : null}">Gêneros</a>
             <a th:href="@{/clientes}" href="/clientes" th:attr="aria-current=${modulo == 'clientes' ? 'page' : null}">Clientes</a>
-            <a th:href="@{/locacoes}" href="/locacoes" th:attr="aria-current=${modulo == 'locacoes' ? 'page' : null}">Loca��es</a>
+            <a th:href="@{/locacoes}" href="/locacoes" th:attr="aria-current=${modulo == 'locacoes' ? 'page' : null}">Locações</a>
         </nav>
     </div>
 </header>
