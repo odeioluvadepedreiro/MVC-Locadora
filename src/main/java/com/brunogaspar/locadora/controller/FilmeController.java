@@ -11,9 +11,9 @@ public class FilmeController {
     @GetMapping({"/", "/filmes"})
     public String filmes(Model model) {
         return mostrar(model, "filmes", "Filmes", List.of(
-                new Item("Interestelar", "Fic��o cient�fica � 2014"),
-                new Item("Shrek", "Anima��o � 2001"),
-                new Item("Vingadores: Ultimato", "A��o � 2019")
+                new Item("Interestelar", "Ficção científica · 2014"),
+                new Item("Shrek", "Animação · 2001"),
+                new Item("Vingadores: Ultimato", "Ação · 2019")
         ));
     }
 
@@ -28,10 +28,10 @@ public class FilmeController {
 
     @GetMapping("/generos")
     public String generos(Model model) {
-        return mostrar(model, "generos", "G�neros", List.of(
-                new Item("Fic��o cient�fica", "Interestelar"),
-                new Item("Anima��o", "Shrek"),
-                new Item("A��o", "Vingadores: Ultimato")
+        return mostrar(model, "generos", "Gêneros", List.of(
+                new Item("Ficção científica", "Interestelar"),
+                new Item("Animação", "Shrek"),
+                new Item("Ação", "Vingadores: Ultimato")
         ));
     }
 
@@ -45,9 +45,9 @@ public class FilmeController {
 
     @GetMapping("/locacoes")
     public String locacoes(Model model) {
-        return mostrar(model, "locacoes", "Loca��es", List.of(
-                new Item("Interestelar", "Ana Ribeiro � Em andamento"),
-                new Item("Shrek", "Lucas Almeida � Devolvido")
+        return mostrar(model, "locacoes", "Locações", List.of(
+                new Item("Interestelar", "Ana Ribeiro · Em andamento"),
+                new Item("Shrek", "Lucas Almeida · Devolvido")
         ));
     }
 
